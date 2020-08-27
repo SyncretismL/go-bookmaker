@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package subscribe;
+
+option go_package = "internal/subscribe";
+
+message SubscrRequest {
+    repeated string sport = 1;
+    string repeat = 2;
+}
+
+message SubscrResponse {
+    repeated Result results = 1;
+}
+  
+message Result {
+    string sport = 1;
+    double delta = 2;
+}
+  
+service SubscrService {
+    rpc SubscribeOnSportsLines (stream SubscrRequest) returns (stream SubscrResponse);
+}

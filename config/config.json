@@ -1,0 +1,41 @@
+{
+    "database": {
+        "user": "syncretism",
+        "password": "admin",
+        "host": "postgres",
+        "port": "5432",
+        "name": "syncretism" 
+    },
+    "http": {
+        "adress": ":9000"
+    },
+    "provider": {
+        "adress": "http://lines-provider:8000/api/v1/lines/"
+    },
+    "grpc": {
+        "adress": ":9001"
+    },
+    "sports":[
+        {
+            "sport": "baseball",
+            "duration":"3s"
+        },
+        {
+            "sport": "football",
+            "duration":"1s"
+        },
+        {
+            "sport": "soccer",
+            "duration":"5s"
+        }
+    ],
+    "log": {
+        "enable_console": true,
+        "console_JSON_format": true,
+        "console_level": "debug",
+        "enable_file": true,
+        "file_json_format": false,
+        "file_level": "info",
+        "file_location": "./logs.log"
+    }
+}
